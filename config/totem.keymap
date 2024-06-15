@@ -101,6 +101,15 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34 35 36 37>;
         };
+
+        a_acute: a_acute {
+            compatible = "zmk,behavior-mod-morph";
+            label = "A_ACUTE";
+            bindings = <&acute A>, <&kp B>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -135,7 +144,7 @@
         accent_layer {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &acute A  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &a_acute  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
