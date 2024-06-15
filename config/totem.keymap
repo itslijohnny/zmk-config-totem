@@ -61,6 +61,22 @@
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
         };
+
+        a_acute: a_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp E>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp A>;
+
+            label = "A_ACUTE";
+        };
     };
 
     behaviors {
@@ -115,8 +131,17 @@
             bindings = <
                 &kp J         &kp C            &kp Y                &kp F         &kp K         &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
                 &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P         &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr RALT A  &hmr RCTRL O
-&kp UNDERSCORE  &kp X         &kp V            &kp G                &kp D         &kp B         &kp SINGLE_QUOTE  &kp L         &kp COMMA             &kp DOT      &kp FSLH      &kp Q
-                                               &kp TAB              &lt 1 E       &lt 2 BSPC    &lt 3 RETURN      &lt 4 SPACE   &lt 0 ESCAPE
+&kp UNDERSCORE  &kp X         &kp V            &kp G                &lt 1 D       &kp B         &kp SINGLE_QUOTE  &kp L         &kp COMMA             &kp DOT      &kp FSLH      &kp Q
+                                               &kp TAB              &lt 2 E       &lt 3 BSPC    &lt 4 RETURN      &lt 5 SPACE   &lt 0 ESCAPE
+            >;
+        };
+
+        accent_layer {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &a_acute  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
