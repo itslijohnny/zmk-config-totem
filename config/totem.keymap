@@ -11,7 +11,9 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define NAV  1
@@ -113,10 +115,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp J         &kp C            &kp Y                &kp F         &kp K            &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
-                &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P            &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr RALT A  &hmr RCTRL O
-&kp UNDERSCORE  &kp X         &kp V            &kp G                &kp D         &kp B            &kp SINGLE_QUOTE  &kp L         &kp COMMA             &kp DOT      &kp FSLH      &kp Q
-                                               &kp TAB              &lt 1 E       &kp BACKSPACE    &lt 2 RETURN      &lt 3 SPACE   &lt 0 ESCAPE
+                &kp J         &kp C            &kp Y                &kp F         &kp K         &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
+                &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P         &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr RALT A  &hmr RCTRL O
+&kp UNDERSCORE  &kp X         &kp V            &kp G                &kp D         &kp B         &kp SINGLE_QUOTE  &kp L         &kp COMMA             &kp DOT      &kp FSLH      &kp Q
+                                               &kp TAB              &lt 1 E       &lt 2 BSPC    &lt 3 RETURN      &lt 4 SPACE   &lt 0 ESCAPE
             >;
         };
 
@@ -126,6 +128,15 @@
        &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT
 &none  &none      &none         &none             &none       &none    &none  &kp PG_DN  &none     &none    &none      &none
                                 &none             &none       &none    &none  &kp PSCRN  &none
+            >;
+        };
+
+        config_layer {
+            bindings = <
+       &none      &none         &none             &none       &none    &none  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &bootloader
+       &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &sys_reset
+&none  &none      &none         &none             &none       &none    &none  &none         &none         &none         &none        &bt BT_CLR
+                                &none             &none       &none    &none  &none         &none
             >;
         };
 
