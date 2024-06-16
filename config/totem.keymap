@@ -105,7 +105,7 @@
         a_acute: a_acute {
             compatible = "zmk,behavior-mod-morph";
             label = "A_ACUTE";
-            bindings = <&acute A>, <&kp B>;
+            bindings = <&acute A>, <&acute LS(A)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
