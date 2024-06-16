@@ -116,7 +116,7 @@
             label = "O_ACUTE";
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent LA(E) O>, <&accent LS(O)>;
+            bindings = <&accent LA(E) O>, <&accent LA(E) LS(O)>;
         };
 
         e_acute: e_acute {
