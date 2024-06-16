@@ -62,14 +62,14 @@
                 <&kp G &kp I &kp F>;
         };
 
-        acute: acute {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+        accent: acute {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
             bindings =
                 <&macro_tap>,
-                <&kp LA(E) &macro_param_1to1>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>;
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
 
             label = "ACUTE";
         };
@@ -105,10 +105,34 @@
         a_acute: a_acute {
             compatible = "zmk,behavior-mod-morph";
             label = "A_ACUTE";
-            bindings = <&acute A>, <&acute LS(A)>;
+            bindings = <&accent LA(E) A>, <&accent LA(E) LS(A)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        o_acute: o_acute {
+            compatible = "zmk,behavior-mod-morph";
+            label = "O_ACUTE";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(E) O>, <&accent LS(O)>;
+        };
+
+        e_acute: e_acute {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_ACUTE";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(E) E>, <&accent LA(E) LS(E)>;
+        };
+
+        i_acute: i_acute {
+            compatible = "zmk,behavior-mod-morph";
+            label = "I_ACUTE";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(E) I>, <&accent LA(E) LS(I)>;
         };
     };
 
@@ -143,10 +167,10 @@
 
         accent_layer {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &a_acute  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans
+        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &i_acute  &a_acute  &o_acute
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
+                        &trans  &e_acute  &trans    &trans  &trans  &trans
             >;
         };
 
