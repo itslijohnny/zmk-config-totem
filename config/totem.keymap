@@ -134,6 +134,22 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             bindings = <&accent LA(E) I>, <&accent LA(E) LS(I)>;
         };
+
+        u_acute: u_acute {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_ACUTE";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(E) U>, <&accent LA(E) LS(U)>;
+        };
+
+        a_tilde: a_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "A_TILDE";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(N) A>, <&accent LA(N) LS(A)>;
+        };
     };
 
     keymap {
@@ -160,17 +176,17 @@
             bindings = <
                 &kp J         &kp C            &kp Y                &kp F         &kp K         &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
                 &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P         &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr RALT A  &hmr RCTRL O
-&kp UNDERSCORE  &kp X         &kp V            &kp G                &lt 1 D       &kp B         &kp SINGLE_QUOTE  &kp L         &kp COMMA             &kp DOT      &kp FSLH      &kp Q
+&kp UNDERSCORE  &kp X         &kp V            &kp G                &lt 1 D       &kp B         &kp SINGLE_QUOTE  &lt 1 L       &kp COMMA             &kp DOT      &kp FSLH      &kp Q
                                                &kp TAB              &lt 2 E       &lt 3 BSPC    &lt 4 RETURN      &lt 5 SPACE   &lt 0 ESCAPE
             >;
         };
 
         accent_layer {
             bindings = <
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans
-        &trans  &trans  &trans  &trans    &trans    &trans  &trans  &i_acute  &a_acute  &o_acute
-&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
-                        &trans  &e_acute  &trans    &trans  &trans  &trans
+        &trans  &kp LA(C)  &trans  &trans    &trans    &trans  &trans  &u_acute  &a_tilde  &trans
+        &trans  &trans     &trans  &trans    &trans    &trans  &trans  &i_acute  &a_acute  &o_acute
+&trans  &trans  &trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
+                           &trans  &e_acute  &trans    &trans  &trans  &trans
             >;
         };
 
