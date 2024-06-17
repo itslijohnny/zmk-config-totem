@@ -150,6 +150,46 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             bindings = <&accent LA(N) A>, <&accent LA(N) LS(A)>;
         };
+
+        o_tilde: o_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "O_TILDE";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(N) O>, <&accent LA(N) LS(O)>;
+        };
+
+        a_circ: a_circ {
+            compatible = "zmk,behavior-mod-morph";
+            label = "A_CIRC";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(I) A>, <&accent LA(I) LS(A)>;
+        };
+
+        o_circ: o_circ {
+            compatible = "zmk,behavior-mod-morph";
+            label = "O_CIRC";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(I) O>, <&accent LA(I) LS(O)>;
+        };
+
+        e_circ: e_circ {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_CIRC";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(I) E>, <&accent LA(I) LS(E)>;
+        };
+
+        a_grave: a_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "A_GRAVE";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&accent LA(GRAVE) A>, <&accent LA(GRAVE) LS(A)>;
+        };
     };
 
     keymap {
@@ -183,9 +223,9 @@
 
         accent_layer {
             bindings = <
-        &trans  &kp LA(C)  &trans  &trans    &trans    &trans  &trans  &u_acute  &a_tilde  &trans
+        &trans  &kp LA(C)  &trans  &trans    &trans    &trans  &trans  &u_acute  &a_tilde  &o_tilde
         &trans  &trans     &trans  &trans    &trans    &trans  &trans  &i_acute  &a_acute  &o_acute
-&trans  &trans  &trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans     &trans  &e_circ   &trans    &trans  &trans  &a_grave  &a_circ   &o_circ   &trans
                            &trans  &e_acute  &trans    &trans  &trans  &trans
             >;
         };
