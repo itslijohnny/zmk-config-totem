@@ -233,7 +233,7 @@
        &kp ASTRK  &kp AMPS   &kp LBRC  &kp RBRC    &kp CARET    &none  &none            &none              &none          &none
        &kp SEMI   &kp AT     &kp LPAR  &kp RPAR    &kp GRAVE    &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RCTRL
 &none  &kp TILDE  &kp PRCNT  &kp LBKT  &kp RBKT    &kp PIPE     &none  &none            &none              &none          &none      &none
-                             &kp DOT   &kp DOLLAR  &kp UNDER    &none  &none            &none
+                             &kp HASH  &kp DOLLAR  &kp UNDER    &none  &none            &none
             >;
         };
 
