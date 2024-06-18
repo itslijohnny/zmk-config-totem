@@ -70,7 +70,6 @@
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
-
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -194,7 +193,7 @@
 
             bindings = <
                 &kp J         &kp C            &kp Y                &kp F         &kp K         &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
-                &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P         &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr RALT A  &hmr RCTRL O
+                &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P         &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr LALT A  &hmr RCTRL O
 &kp UNDERSCORE  &kp X         &kp V            &kp G                &lt 1 D       &kp B         &kp SINGLE_QUOTE  &lt 1 L       &kp COMMA             &kp DOT      &kp FSLH      &kp Q
                                                &kp TAB              &lt 2 E       &lt 3 BSPC    &lt 4 RETURN      &lt 5 SPACE   &lt 0 ESCAPE
             >;
