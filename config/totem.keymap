@@ -83,7 +83,7 @@
         a_acute: a_acute {
             compatible = "zmk,behavior-mod-morph";
             label = "A_ACUTE";
-            bindings = <&accent LA(E) A>, <&accent LA(E) LS(A)>;
+            bindings = <&accent RA(E) A>, <&accent RA(E) LS(A)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
