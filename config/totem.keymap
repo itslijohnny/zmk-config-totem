@@ -64,7 +64,7 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37 32 33 34>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
             require-prior-idle-ms = <50>;
         };
 
@@ -78,7 +78,7 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34 35 36 37>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
             require-prior-idle-ms = <50>;
         };
 
@@ -170,6 +170,34 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             bindings = <&accent RA(GRAVE) A>, <&accent RA(GRAVE) LS(A)>;
         };
+
+        thl: thl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THL";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+
+            tapping-term-ms = <280>;
+            hold-trigger-key-positions = <5 15 26 7 8 9 17 18 19 28 29 30 31 16 27 6 35 36 37>;
+            hold-trigger-on-release;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+        };
+
+        thr: thr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THR";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+
+            tapping-term-ms = <280>;
+            hold-trigger-on-release;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
+        };
     };
 
     keymap {
@@ -194,10 +222,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp J         &kp C            &kp Y                &kp F         &kp K         &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
-                &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P         &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr LALT A  &hmr RCTRL O
-&kp UNDERSCORE  &kp X         &kp V            &kp G                &lt 1 D       &kp B         &kp SINGLE_QUOTE  &lt 1 L       &kp COMMA             &kp DOT      &kp FSLH      &kp Q
-                                               &kp TAB              &lt 2 E       &lt 3 BSPC    &lt 4 RETURN      &lt 5 SPACE   &lt 0 ESCAPE
+                &kp J         &kp C            &kp Y                &kp F         &kp K          &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
+                &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P          &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr LALT A  &hmr RCTRL O
+&kp UNDERSCORE  &kp X         &kp V            &kp G                &lt 1 D       &kp B          &kp SINGLE_QUOTE  &lt 1 L       &kp COMMA             &kp DOT      &kp FSLH      &kp Q
+                                               &kp TAB              &thl 2 E      &thl 3 BSPC    &thr 4 RETURN     &thr 5 SPACE  &thr 0 ESCAPE
             >;
         };
 
