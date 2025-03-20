@@ -236,21 +236,21 @@
             label = "NAV";
         };
 
+        fn_layer {
+            bindings = <
+        &kp F12                &kp F7        &kp F8        &kp F9         &trans    &kp LA(LG(D))  &none                            &kp C_VOLUME_UP                   &none                &none
+        &hml LEFT_CONTROL F11  &hml LALT F4  &hml LGUI F5  &hml LSHFT F6  &trans    &kp LA(LG(F))  &hmr RIGHT_SHIFT LG(LEFT_ARROW)  &hmr RIGHT_COMMAND C_VOLUME_DOWN  &hmr LALT LG(RIGHT)  &kp RCTRL
+&trans  &kp F10                &kp F1        &kp F2        &kp F3         &trans    &kp LA(LG(G))  &kp LA(LG(LEFT))                 &kp C_MUTE                        &kp LA(LG(RIGHT))    &none      &none
+                                             &trans        &trans         &trans    &trans         &trans                           &trans
+            >;
+        };
+
         config_layer {
             bindings = <
        &none      &none         &none             &none       &none    &none  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &bootloader
        &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &sys_reset
 &none  &none      &none         &none             &none       &none    &none  &none         &none         &none         &none        &bt BT_CLR
                                 &none             &none       &none    &none  &none         &none
-            >;
-        };
-
-        function_layer {
-            bindings = <
-       &kp F10  &kp F4  &kp F5  &kp F6  &none      &none  &none            &none              &none     &none
-       &kp F11  &kp F1  &kp F2  &kp F3  &none      &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp LALT  &kp RCTRL
-&none  &kp F12  &kp F7  &kp F8  &kp F9  &none      &none  &none            &none              &none     &none      &none
-                        &none   &none   &kp DEL    &none  &none            &none
             >;
         };
 
