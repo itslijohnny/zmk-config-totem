@@ -201,22 +201,26 @@
             >;
         };
 
-        accent_layer {
+        num_layer {
             bindings = <
-        &trans  &kp RA(C)  &trans  &trans    &trans    &trans  &trans  &exc_qmk  &bac_del  &none
-        &trans  &trans     &trans  &trans    &trans    &trans  &trans  &dot_col  &none     &none
-&trans  &trans  &trans     &trans  &none     &trans    &trans  &trans  &none     &none     &none  &trans
-                           &trans  &com_sem  &trans    &trans  &trans  &trans
+        &trans  &kp N7            &kp N8            &kp N9          &trans     &trans  &trans  &trans  &trans  &trans
+        &trans  &hml LEFT_ALT N4  &hml LEFT_GUI N5  &hml LSHIFT N6  &kp N0     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp N1            &kp N2            &kp N3          &kp DOT    &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans            &trans          &trans     &trans  &trans  &trans
             >;
+
+            label = "NUM";
         };
 
         nav_layer {
             bindings = <
-       &none      &none         &none             &none       &none    &none  &kp PG_UP  &kp HOME  &kp END  &none
-       &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT
-&none  &none      &none         &none             &none       &none    &none  &kp PG_DN  &none     &none    &none      &none
-                                &none             &none       &none    &none  &kp PSCRN  &none
+        &trans  &trans              &kp UP                  &trans             &kp PAGE_UP      &none   &kp PG_UP  &kp HOME  &kp END  &none
+        &trans  &hml LEFT_ALT LEFT  &hml LEFT_COMMAND DOWN  &hml LSHIFT RIGHT  &kp PAGE_DOWN    &none   &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT
+&trans  &trans  &trans              &trans                  &trans             &trans           &trans  &kp PG_DN  &none     &none    &none      &none
+                                    &trans                  &trans             &trans           &trans  &trans     &trans
             >;
+
+            label = "NAV";
         };
 
         config_layer {
@@ -225,15 +229,6 @@
        &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &sys_reset
 &none  &none      &none         &none             &none       &none    &none  &none         &none         &none         &none        &bt BT_CLR
                                 &none             &none       &none    &none  &none         &none
-            >;
-        };
-
-        number_layer {
-            bindings = <
-       &kp EXCL   &kp N4  &kp N5   &kp N6  &kp COMMA    &none  &none            &none              &none     &none
-       &kp COLON  &kp N1  &kp N2   &kp N3  &kp EQUAL    &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp LALT  &kp RCTRL
-&none  &kp PLUS   &kp N7  &kp N8   &kp N9  &kp BSLH     &none  &none            &none              &none     &none      &none
-                          &kp DOT  &kp N0  &kp MINUS    &none  &none            &none
             >;
         };
 
