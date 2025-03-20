@@ -22,13 +22,6 @@
 #define TVP1 4
 #define TVP2 5
 
-&lt {
-    flavor = "balanced";
-    quick-tap-ms = <175>;
-    tapping-term-ms = <280>;
-    require-prior-idle-ms = <50>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -74,7 +67,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
@@ -114,6 +107,68 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             keep-mods = <(MOD_RSFT)>;
+        };
+
+        hmsl: hmsl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMSL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
+            require-prior-idle-ms = <100>;
+        };
+
+        hmsr: hmsr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMSR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
+            require-prior-idle-ms = <100>;
+        };
+
+        copy_cut: copy_cut {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COPY_CUT";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>, <&kp LC(X)>;
+        };
+
+        lpar_less: lpar_less {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAR_LESS";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rpar_greater: rpar_greater {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RPAR_GREATER";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        slash_bslash: slash_bslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_BSLASH";
+            bindings = <&kp SLASH>, <&kp LS(BACKSLASH)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
