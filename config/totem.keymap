@@ -214,10 +214,10 @@
 
         nav_layer {
             bindings = <
-        &trans  &trans              &kp UP                  &trans             &kp PAGE_UP      &none   &kp PG_UP  &kp HOME  &kp END  &none
-        &trans  &hml LEFT_ALT LEFT  &hml LEFT_COMMAND DOWN  &hml LSHIFT RIGHT  &kp PAGE_DOWN    &none   &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT
-&trans  &trans  &trans              &trans                  &trans             &trans           &trans  &kp PG_DN  &none     &none    &none      &none
-                                    &trans                  &trans             &trans           &trans  &trans     &trans
+        &trans  &trans              &kp UP                  &trans             &kp PAGE_UP      &kp HOME  &trans               &kp UP          &trans           &trans
+        &trans  &hml LEFT_ALT LEFT  &hml LEFT_COMMAND DOWN  &hml LSHIFT RIGHT  &kp PAGE_DOWN    &kp END   &hmr RIGHT_ALT LEFT  &hmr RGUI DOWN  &hmr RALT RIGHT  &trans
+&trans  &trans  &trans              &trans                  &trans             &trans           &trans    &trans               &trans          &trans           &trans  &trans
+                                    &trans                  &trans             &trans           &trans    &trans               &trans
             >;
 
             label = "NAV";
