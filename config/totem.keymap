@@ -210,7 +210,7 @@
        &kp Q         &kp W            &kp F                &kp P          &kp B         &kp J         &kp L             &kp U                 &kp Y        &kp SINGLE_QUOTE
        &hml LCTRL A  &hml LEFT_ALT R  &hml LEFT_COMMAND T  &hmsl LSHFT T  &kp G         &kp M         &hmsr RSHFT N     &hmr RIGHT_COMMAND E  &hmr LALT I  &hmr RCTRL O
 &kp Q  &kp Z         &kp X            &kp C                &kp D          &kp V         &kp K         &kp H             &com_sem              &dot_col     &exc_qmk          &kp SINGLE_QUOTE
-                                      &kp ESCAPE           &ltm 1 SPACE   &ltm 2 TAB    &ltm 2 ENTER  &ltm 1 BACKSPACE  &none
+                                      &ltm 3 ESCAPE        &ltm 1 SPACE   &ltm 2 TAB    &ltm 2 ENTER  &ltm 1 BACKSPACE  &ltm 4 DELETE
             >;
         };
 
