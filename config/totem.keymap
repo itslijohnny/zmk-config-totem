@@ -30,6 +30,163 @@
             bindings = <&caps_word>;
             key-positions = <13 16>;
         };
+
+        esc_combo {
+            bindings = <&gresc>;
+            key-positions = <0 1>;
+        };
+
+        find_combos {
+            bindings = <&kp LS(F)>;
+            key-positions = <21 2>;
+        };
+
+        SAVE_COMBOS {
+            bindings = <&kp LC(S)>;
+            key-positions = <21 12>;
+        };
+
+        copy_combos {
+            bindings = <&copy_cut>;
+            key-positions = <21 23>;
+        };
+
+        all_combos {
+            bindings = <&kp LC(A)>;
+            key-positions = <21 10>;
+        };
+
+        paste_combos {
+            bindings = <&kp LC(V)>;
+            key-positions = <21 25>;
+        };
+
+        wm12 {
+            bindings = <&kp LA(LG(E))>;
+            key-positions = <5 15>;
+            layers = <3>;
+        };
+
+        wm_23 {
+            bindings = <&kp LA(LG(T))>;
+            key-positions = <15 26>;
+            layers = <3>;
+        };
+
+        l_par {
+            bindings = <&lpar_less>;
+            key-positions = <16 17>;
+        };
+
+        r_par {
+            bindings = <&rpar_greater>;
+            key-positions = <17 18>;
+        };
+
+        l_br {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <27 28>;
+        };
+
+        r_br {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <28 29>;
+        };
+
+        plus {
+            bindings = <&kp KP_PLUS>;
+            key-positions = <6 16>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <16 27>;
+        };
+
+        star {
+            bindings = <&kp ASTERISK>;
+            key-positions = <7 17>;
+        };
+
+        spl {
+            bindings = <&slash_bslash>;
+            key-positions = <17 28>;
+        };
+
+        and {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <5 15>;
+        };
+
+        or {
+            bindings = <&kp PIPE>;
+            key-positions = <15 26>;
+        };
+
+        equ {
+            bindings = <&kp EQUAL>;
+            key-positions = <8 18>;
+        };
+
+        under_sc {
+            bindings = <&kp UNDER>;
+            key-positions = <18 29>;
+        };
+
+        grave_combos {
+            bindings = <&kp GRAVE>;
+            key-positions = <13 24>;
+        };
+
+        at_combos {
+            bindings = <&kp AT>;
+            key-positions = <1 11>;
+        };
+
+        hash_combos {
+            bindings = <&kp HASH>;
+            key-positions = <2 12>;
+        };
+
+        dollor_combos {
+            bindings = <&kp DOLLAR>;
+            key-positions = <3 13>;
+        };
+
+        percent_combos {
+            bindings = <&kp PERCENT>;
+            key-positions = <11 22>;
+        };
+
+        hat_combos {
+            bindings = <&kp CARET>;
+            key-positions = <12 23>;
+        };
+
+        screenshot {
+            bindings = <&kp LG(LC(LS(N4)))>;
+            key-positions = <11 12 13 33>;
+        };
+
+        undo_combos {
+            bindings = <&kp LC(Z)>;
+            key-positions = <21 22>;
+        };
+
+        cap {
+            bindings = <&caps_word>;
+            key-positions = <21 30>;
+        };
+
+        func_spa1 {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <33 19>;
+        };
+
+        func_spa2 {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <10 33>;
+        };
     };
 
     macros {
