@@ -222,10 +222,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp J         &kp C            &kp Y                &kp F         &kp K          &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
-                &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P          &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr LALT A  &hmr RCTRL O
-&kp UNDERSCORE  &kp X         &kp V            &kp G                &lt 1 D       &kp B          &kp SINGLE_QUOTE  &lt 1 L       &kp COMMA             &kp DOT      &kp FSLH      &kp Q
-                                               &kp TAB              &thl 2 E      &thl 3 BSPC    &thr 4 RETURN     &thr 5 SPACE  &thr 6 ESCAPE
+       &kp Q         &kp W            &kp F                &kp P         &kp B         &kp J          &kp L             &kp U                 &kp Y        &kp SINGLE_QUOTE
+       &hml LCTRL A  &hml LEFT_ALT R  &hml LEFT_COMMAND T  &hml LSHFT T  &kp G         &kp M          &hmr RSHFT N      &hmr RIGHT_COMMAND E  &hmr LALT I  &hmr RCTRL O
+&kp Q  &kp Z         &kp X            &kp C                &kp D         &kp V         &kp K          &kp H             &kp COMMA             &kp DOT      &kp EXCLAMATION   &kp SINGLE_QUOTE
+                                      &kp ESCAPE           &thl 2 SPACE  &thl 3 TAB    &thr 0 RETURN  &thr 4 BACKSPACE  &thr 5 DELETE
             >;
         };
 
@@ -253,15 +253,6 @@
        &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &sys_reset
 &none  &none      &none         &none             &none       &none    &none  &none         &none         &none         &none        &bt BT_CLR
                                 &none             &none       &none    &none  &none         &none
-            >;
-        };
-
-        symbol_layer {
-            bindings = <
-       &kp ASTRK  &kp AMPS   &kp LBRC  &kp RBRC    &kp CARET    &none  &none            &none              &none          &none
-       &kp SEMI   &kp AT     &kp LPAR  &kp RPAR    &kp GRAVE    &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RCTRL
-&none  &kp TILDE  &kp PRCNT  &kp LBKT  &kp RBKT    &kp PIPE     &none  &none            &none              &none          &none      &none
-                             &kp HASH  &kp DOLLAR  &kp UNDER    &none  &none            &none
             >;
         };
 
