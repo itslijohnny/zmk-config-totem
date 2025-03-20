@@ -60,12 +60,12 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <300>;
         };
 
         hmr: hmr {
@@ -79,124 +79,41 @@
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <300>;
         };
 
-        a_acute: a_acute {
+        com_sem: com_sem {
             compatible = "zmk,behavior-mod-morph";
-            label = "A_ACUTE";
-            bindings = <&accent RA(E) A>, <&accent RA(E) LS(A)>;
-
+            label = "COM_SEM";
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
         };
 
-        o_acute: o_acute {
+        dot_col: dot_col {
             compatible = "zmk,behavior-mod-morph";
-            label = "O_ACUTE";
+            label = "DOT_COL";
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(E) O>, <&accent RA(E) LS(O)>;
+            bindings = <&kp PERIOD>, <&kp COLON>;
         };
 
-        e_acute: e_acute {
+        exc_qmk: exc_qmk {
             compatible = "zmk,behavior-mod-morph";
-            label = "E_ACUTE";
+            label = "EXC_QMK";
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(E) E>, <&accent RA(E) LS(E)>;
+            bindings = <&kp EXCLAMATION>, <&kp QUESTION>;
         };
 
-        i_acute: i_acute {
+        bac_del: bac_del {
             compatible = "zmk,behavior-mod-morph";
-            label = "I_ACUTE";
+            label = "BAC_DEL";
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(E) I>, <&accent RA(E) LS(I)>;
-        };
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
-        u_acute: u_acute {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_ACUTE";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(E) U>, <&accent RA(E) LS(U)>;
-        };
-
-        a_tilde: a_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            label = "A_TILDE";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(N) A>, <&accent RA(N) LS(A)>;
-        };
-
-        o_tilde: o_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            label = "O_TILDE";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(N) O>, <&accent RA(N) LS(O)>;
-        };
-
-        a_circ: a_circ {
-            compatible = "zmk,behavior-mod-morph";
-            label = "A_CIRC";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(I) A>, <&accent RA(I) LS(A)>;
-        };
-
-        o_circ: o_circ {
-            compatible = "zmk,behavior-mod-morph";
-            label = "O_CIRC";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(I) O>, <&accent RA(I) LS(O)>;
-        };
-
-        e_circ: e_circ {
-            compatible = "zmk,behavior-mod-morph";
-            label = "E_CIRC";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(I) E>, <&accent RA(I) LS(E)>;
-        };
-
-        a_grave: a_grave {
-            compatible = "zmk,behavior-mod-morph";
-            label = "A_GRAVE";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&accent RA(GRAVE) A>, <&accent RA(GRAVE) LS(A)>;
-        };
-
-        thl: thl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THL";
-            #binding-cells = <2>;
-            bindings = <&mo>, <&kp>;
-
-            tapping-term-ms = <280>;
-            hold-trigger-key-positions = <5 15 26 7 8 9 17 18 19 28 29 30 31 16 27 6 35 36 37>;
-            hold-trigger-on-release;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <50>;
-            flavor = "balanced";
-        };
-
-        thr: thr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THR";
-            #binding-cells = <2>;
-            bindings = <&mo>, <&kp>;
-
-            tapping-term-ms = <280>;
-            hold-trigger-on-release;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <50>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
+            keep-mods = <(MOD_RSFT)>;
         };
     };
 
@@ -222,19 +139,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q         &kp W            &kp F                &kp P         &kp B         &kp J          &kp L             &kp U                 &kp Y        &kp SINGLE_QUOTE
-       &hml LCTRL A  &hml LEFT_ALT R  &hml LEFT_COMMAND T  &hml LSHFT T  &kp G         &kp M          &hmr RSHFT N      &hmr RIGHT_COMMAND E  &hmr LALT I  &hmr RCTRL O
-&kp Q  &kp Z         &kp X            &kp C                &kp D         &kp V         &kp K          &kp H             &kp COMMA             &kp DOT      &kp EXCLAMATION   &kp SINGLE_QUOTE
-                                      &kp ESCAPE           &thl 2 SPACE  &thl 3 TAB    &thr 0 RETURN  &thr 4 BACKSPACE  &thr 5 DELETE
+       &kp Q         &kp W            &kp F                &kp P         &kp B    &kp J  &kp L         &kp U                 &kp Y        &kp SINGLE_QUOTE
+       &hml LCTRL A  &hml LEFT_ALT R  &hml LEFT_COMMAND T  &hml LSHFT T  &kp G    &kp M  &hmr RSHFT N  &hmr RIGHT_COMMAND E  &hmr LALT I  &hmr RCTRL O
+&kp Q  &kp Z         &kp X            &kp C                &kp D         &kp V    &kp K  &kp H         &kp COMMA             &kp DOT      &kp EXCLAMATION   &kp SINGLE_QUOTE
+                                      &kp ESCAPE           &none         &none    &none  &none         &none
             >;
         };
 
         accent_layer {
             bindings = <
-        &trans  &kp RA(C)  &trans  &trans    &trans    &trans  &trans  &u_acute  &a_tilde  &o_tilde
-        &trans  &trans     &trans  &trans    &trans    &trans  &trans  &i_acute  &a_acute  &o_acute
-&trans  &trans  &trans     &trans  &e_circ   &trans    &trans  &trans  &a_grave  &a_circ   &o_circ   &trans
-                           &trans  &e_acute  &trans    &trans  &trans  &trans
+        &trans  &kp RA(C)  &trans  &trans    &trans    &trans  &trans  &exc_qmk  &bac_del  &none
+        &trans  &trans     &trans  &trans    &trans    &trans  &trans  &dot_col  &none     &none
+&trans  &trans  &trans     &trans  &none     &trans    &trans  &trans  &none     &none     &none  &trans
+                           &trans  &com_sem  &trans    &trans  &trans  &trans
             >;
         };
 
