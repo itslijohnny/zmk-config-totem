@@ -365,7 +365,7 @@
 
             bindings = <
        &kp Q         &kp W            &kp F                &kp P          &kp B         &kp J         &kp L             &kp U                 &kp Y        &kp SINGLE_QUOTE
-       &hml LCTRL A  &hml LEFT_ALT R  &hml LEFT_COMMAND T  &hmsl LSHFT T  &kp G         &kp M         &hmsr RSHFT N     &hmr RIGHT_COMMAND E  &hmr LALT I  &hmr RCTRL O
+       &hml LCTRL A  &hml LEFT_ALT R  &hml LEFT_COMMAND S  &hmsl LSHFT T  &kp G         &kp M         &hmsr RSHFT N     &hmr RIGHT_COMMAND E  &hmr LALT I  &hmr RCTRL O
 &kp Q  &kp Z         &kp X            &kp C                &kp D          &kp V         &kp K         &kp H             &com_sem              &dot_col     &exc_qmk          &kp SINGLE_QUOTE
                                       &ltm 3 ESCAPE        &ltm 1 SPACE   &ltm 2 TAB    &ltm 2 ENTER  &ltm 1 BACKSPACE  &ltm 4 DELETE
             >;
@@ -400,6 +400,8 @@
 &trans  &kp F10                &kp F1        &kp F2        &kp F3         &trans    &kp LA(LG(G))  &kp LA(LG(LEFT))                 &kp C_MUTE                        &kp LA(LG(RIGHT))    &none      &none
                                              &trans        &trans         &trans    &trans         &trans                           &trans
             >;
+
+            label = "FUN";
         };
 
         config_layer {
@@ -409,6 +411,8 @@
 &trans  &trans        &trans        &trans        &trans        &out OUT_TOG    &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans        &trans          &trans  &trans  &trans
             >;
+
+            label = "SYS";
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
