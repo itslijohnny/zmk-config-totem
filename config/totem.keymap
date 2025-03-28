@@ -175,7 +175,7 @@
 
         cap {
             bindings = <&caps_word>;
-            key-positions = <21 30>;
+            key-positions = <20 31>;
         };
 
         func_spa1 {
