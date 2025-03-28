@@ -76,21 +76,25 @@
         l_par {
             bindings = <&lpar_less>;
             key-positions = <16 17>;
+            require-prior-idle-ms = <200>;
         };
 
         r_par {
             bindings = <&rpar_greater>;
             key-positions = <17 18>;
+            require-prior-idle-ms = <200>;
         };
 
         l_br {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <27 28>;
+            require-prior-idle-ms = <200>;
         };
 
         r_br {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <28 29>;
+            require-prior-idle-ms = <200>;
         };
 
         plus {
