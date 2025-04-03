@@ -427,7 +427,7 @@
         qwert {
             label = "QWERT";
             bindings = <
-       &kp Q         &kp W            &kp RS(E)            &kp R          &kp T         &kp Y         &kp U             &kp I                 &kp O        &kp P
+       &kp Q         &kp W            &kp E                &kp R          &kp T         &kp Y         &kp U             &kp I                 &kp O        &kp P
        &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_COMMAND D  &hmsl LSHFT F  &kp G         &kp H         &hmsr RSHFT J     &hmr RIGHT_COMMAND K  &hmr LALT L  &hmr RCTRL SINGLE_QUOTE
 &kp Q  &kp Z         &kp X            &kp C                &kp V          &kp B         &kp N         &kp M             &com_sem              &dot_col     &exc_qmk                 &kp SINGLE_QUOTE
                                       &ltm 3 ESCAPE        &ltm 1 SPACE   &ltm 2 TAB    &ltm 2 ENTER  &ltm 1 BACKSPACE  &ltm 4 DELETE
