@@ -64,13 +64,13 @@
         wm12 {
             bindings = <&kp LA(LG(E))>;
             key-positions = <5 15>;
-            layers = <3>;
+            layers = <4>;
         };
 
         wm_23 {
             bindings = <&kp LA(LG(T))>;
             key-positions = <15 26>;
-            layers = <3>;
+            layers = <4>;
         };
 
         l_par {
@@ -193,7 +193,7 @@
         };
 
         qwert {
-            bindings = <&tog 5>;
+            bindings = <&tog 0>;
             key-positions = <21 30>;
         };
     };
@@ -356,6 +356,16 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+        qwert {
+            label = "QWERT";
+            bindings = <
+                    &kp Q         &kp W            &kp E                &kp R          &kp T         &kp Y         &kp U             &kp I                 &kp O        &kp P
+                    &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_COMMAND D  &hmsl LSHFT F  &kp G         &kp H         &hmsr RSHFT J     &hmr RIGHT_COMMAND K  &hmr LALT L  &hmr RCTRL SINGLE_QUOTE
+&hmsl LEFT_SHIFT Q  &kp Z         &kp X            &kp C                &kp V          &kp B         &kp N         &kp M             &com_sem              &dot_col     &exc_qmk                 &hmsr RIGHT_SHIFT SINGLE_QUOTE
+                                                   &ltm 4 ESCAPE        &ltm 2 SPACE   &ltm 3 TAB    &ltm 3 ENTER  &ltm 2 BACKSPACE  &ltm 5 DELETE
+            >;
+        };
+
         base_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -376,7 +386,7 @@
        &kp Q         &kp W            &kp F                &kp P          &kp B         &kp J         &kp L             &kp U                 &kp Y        &kp SINGLE_QUOTE
        &hml LCTRL A  &hml LEFT_ALT R  &hml LEFT_COMMAND S  &hmsl LSHFT T  &kp G         &kp M         &hmsr RSHFT N     &hmr RIGHT_COMMAND E  &hmr LALT I  &hmr RCTRL O
 &kp Q  &kp Z         &kp X            &kp C                &kp D          &kp V         &kp K         &kp H             &com_sem              &dot_col     &exc_qmk          &kp SINGLE_QUOTE
-                                      &ltm 3 ESCAPE        &ltm 1 SPACE   &ltm 2 TAB    &ltm 2 ENTER  &ltm 1 BACKSPACE  &ltm 4 DELETE
+                                      &ltm 4 ESCAPE        &ltm 2 SPACE   &ltm 3 TAB    &ltm 3 ENTER  &ltm 2 BACKSPACE  &ltm 5 DELETE
             >;
         };
 
@@ -422,16 +432,6 @@
             >;
 
             label = "SYS";
-        };
-
-        qwert {
-            label = "QWERT";
-            bindings = <
-       &kp Q         &kp W            &kp E                &kp R          &kp T         &kp Y         &kp U             &kp I                 &kp O        &kp P
-       &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_COMMAND D  &hmsl LSHFT F  &kp G         &kp H         &hmsr RSHFT J     &hmr RIGHT_COMMAND K  &hmr LALT L  &hmr RCTRL SINGLE_QUOTE
-&kp Q  &kp Z         &kp X            &kp C                &kp V          &kp B         &kp N         &kp M             &com_sem              &dot_col     &exc_qmk                 &kp SINGLE_QUOTE
-                                      &ltm 3 ESCAPE        &ltm 1 SPACE   &ltm 2 TAB    &ltm 2 ENTER  &ltm 1 BACKSPACE  &ltm 4 DELETE
-            >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
