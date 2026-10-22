@@ -25,12 +25,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-on-release;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <350>;
         };
 
         hmr: hmr {
@@ -39,12 +38,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-on-release;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <350>;
         };
 
         copy_cut: copy_cut {
@@ -52,13 +50,6 @@
             label = "COPY_CUT";
             #binding-cells = <0>;
             bindings = <&kp LC(C)>, <&kp LC(X)>;
-        };
-
-        lshift_cap: lshift_cap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LSHIFT_CAP";
-            #binding-cells = <0>;
-            bindings = <&kp LSHIFT>, <&caps_word>;
         };
 
         com_sem: com_sem {
@@ -104,12 +95,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <220>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-on-release;
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <140>;
         };
 
         hmsr: hmsr {
@@ -118,12 +108,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <220>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-on-release;
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <140>;
         };
 
         lpar_less: lpar_less {
@@ -364,11 +353,6 @@
             bindings = <&kp LC(SPACE)>;
             key-positions = <10 33>;
         };
-
-        qwert {
-            bindings = <&tog 5>;
-            key-positions = <21 30>;
-        };
     };
 
     macros {
@@ -403,16 +387,6 @@
 &kp Q         &kp W            &kp F                &kp P          &kp B         &kp J         &kp L             &kp U                 &kp Y        &kp SINGLE_QUOTE
 &hml LCTRL A  &hml LEFT_ALT R  &hml LEFT_COMMAND S  &hmsl LSHFT T  &kp G         &kp M         &hmsr RSHFT N     &hmr RIGHT_COMMAND E  &hmr LALT I  &hmr RCTRL O
 &kp Z         &kp X            &kp C                &kp D          &kp V         &kp K         &kp H             &com_sem              &dot_col     &exc_qmk          &kp SINGLE_QUOTE
-                                   &ltm 3 ESCAPE        &ltm 1 SPACE   &ltm 2 TAB    &ltm 2 ENTER  &ltm 1 BACKSPACE  &ltm 4 DELETE
-            >;
-        };
-
-        qwert_layer {
-            label = "QWERT";
-            bindings = <
-&kp Q         &kp W            &kp E                &kp R          &kp T         &kp Y         &kp U             &kp I                 &kp O        &kp P
-&hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_COMMAND D  &hmsl LSHFT F  &kp G         &kp H         &hmsr RSHFT J     &hmr RIGHT_COMMAND K  &hmr LALT L  &hmr RCTRL SINGLE_QUOTE
-&kp Z         &kp X            &kp C                &kp V          &kp B         &kp N         &kp M             &com_sem              &dot_col     &exc_qmk          &kp SINGLE_QUOTE
                                    &ltm 3 ESCAPE        &ltm 1 SPACE   &ltm 2 TAB    &ltm 2 ENTER  &ltm 1 BACKSPACE  &ltm 4 DELETE
             >;
         };
