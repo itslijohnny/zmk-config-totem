@@ -1,0 +1,13 @@
+/ {
+    behaviors {
+        num_word: num_word {
+            compatible = "zmk,behavior-num-word";
+            #binding-cells = <1>;
+            layers = <2>;
+            continue-list = <
+                BACKSPACE DELETE DOT COMMA
+                PLUS MINUS STAR SLASH EQUAL
+            >;
+        };
+    };
+};
